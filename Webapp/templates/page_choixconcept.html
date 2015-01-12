@@ -1,0 +1,219 @@
+{% extends "page_base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+	<style type="text/css">
+	  
+		html,body {  
+			/*overflow:hidden;/*
+		 /* overflow-x: hidden*/
+		 
+    	font-family:"Roboto";
+		}
+		#indawo path {
+    	fill: #EC6C44;
+		}
+		#appia path {
+    	fill: #EC6C44;
+		}
+		#conect path {
+    	fill: #4EBDD0;
+		}
+		h1 {
+    	font-size: 4em;
+		}
+		h2 {
+    	color: #aaaaaa;
+		}
+		h4 {
+		  color: #444443;
+    	font-size: 48px;
+    	font-family:"Roboto";
+		}
+		.text {
+		  color: #444443;
+		  font-size: 24px;
+    	font-family:"Roboto";
+		}
+	  .concept {
+	    width: {{x}}px;
+	  }
+		.concept.background {
+		  background-repeat: no-repeat; 
+  		background-size: 100% 100%;
+		}
+  	.concept.one.background {
+  		background-image:url(/static/images/{{bg1}});
+	  }
+	  .concept.two.background {
+  		background-image:url(/static/images/{{bg2}});
+	  }
+	  .concept.three.background {
+  		background-image:url(/static/images/{{bg3}});
+	  }
+	</style>
+  
+  {% include "concept.html" with data=data1 n='one' %}
+  {% include "concept.html" with data=data2 n='two' %}
+  {% include "concept.html" with data=data3 n='three' %}
+  <div id="conclusion" style="padding-left:10%; padding-right:10%;">
+    </br></br></br><center><h4>Conclusion</h4></center>
+    <p class="text"  style="font-size: 22px;">
+      Nous avons choisis de traiter nos concepts à différents niveaux, deux concepts portant sur des usagers précis, 
+      les riverains puis les automobilistes, et un autre, plus globale, s’ouvrant sur tous les usagers susceptible à un
+      moment ou un autre d’être confrontés à un chantier. 
+      Nos concepts s’ancre au maximum dans la réalité du terrain et offrent une réponse à des problèmes précis autour du manque 
+      d’informations et la nécessité de fluidifier les déplacements autour des chantiers. 
+      
+      Concernant la suite du projet, nous sommes actuellement suivi par Fabrice Martin, reponsable innovation chez l’entreprise Colas
+      pour qui chacun des concepts présente un grand interêt. Le concept 1, Appia, et selon lui celui qui à le meilleur potentiel et qui vise le plus juste. 
+      Ainsi nos idées se font entendre et s’ancrent  dans un projet de longue date nommé FURET, portant sur le chantier furtif, mené par 
+      la FNTP en association avec un certain nombre d’entreprises (Bouygues, Vinci). C’est dans ce cadre que nous devrions continuer le
+      developpement de l’un des concept, notamment avec la mise en relation avec le service de Recherche et Developpement de Bouygues. 
+      Une présentation de l’avancée de notre projet est prévue courant janvier pour les ingénieurs R&D spécialisés dans l’internet des objets.
+      Ainsi de là nous pourront idéalement travailler en équipe avec ce groupe de recherche et en arriver à un projet solide pour la phase 3. 
+    </p>
+    </br></br><center><h4 style="font-size: 36px;">Merci de votre attention</h4></center></br>
+    <center><div class='ui button basic' onclick="showc('none');">Retour</div></center>
+  </div>
+
+	<div class="ui basic test large modal transition" >
+		<center>
+			<h1 class="header">Le Chantier Communicant</h1>
+	  	<h2>Découvrez nos concepts : </h2>
+	  </center>
+
+    <div class="actions">
+    	<div class="ui center aligned grid">
+      	<div class="five wide column"><div class="button" onclick="showc('one');"
+      	    onmouseover="$(this).transition({animation  : 'bounce',queue : false });">
+      	  <img class="svg" src="/static/images/indawo.svg"/></div></div>
+      	<div class="five wide column"><div class="button" onclick="showc('two');" 
+      	    onmouseover="$(this).transition({animation  : 'bounce',queue : false });">
+      	  <img class="svg" src="/static/images/appia.svg"/></div></div>
+      	<div class="five wide column"><div class="button" onclick="showc('three');"
+      	    onmouseover="$(this).transition({animation  : 'bounce',queue : false });">
+      	  <img class="svg" src="/static/images/conect.svg" /></div></div>
+      </div>
+      </br></br> </br></br> </br></br>
+    <center><div class='ui button basic inverted' onclick="showc('conclusion');">Conclusion</div></center>
+    </div>
+  </div>
+	
+	<script>
+	
+	 var $current = 'conclusion';
+	 
+	 var one_lastId, one_topMenu, one_topMenuHeight, one_menuItems, one_scrollItems
+	 var two_lastId, two_topMenu, two_topMenuHeight, two_menuItems, two_scrollItems;
+	 var three_lastId, three_topMenu, three_topMenuHeight, three_menuItems, three_scrollItems;
+	
+	 function showc(concept) {
+	   
+  	 if (concept == 'conclusion') {
+  	   $('.concept.three.content').hide();
+	     $('.concept.two.content').hide();
+	     $('.concept.one.content').hide();
+	     $('#conclusion').transition('slide down');
+	     
+	     $current=concept;
+  	 }
+  	 else {
+  	   
+  	   if ($current == 'conclusion') { $('#conclusion').transition('slide down'); }
+  	   
+  	   if ($current != 'none') {
+  	     $('.concept.'+$current+'.menu').transition('slide down');
+  	   }
+  	   
+  	   if (concept != 'none') {
+  	     $('.concept.three.content').hide();
+  	     $('.concept.two.content').hide();
+  	     $('.concept.one.content').hide();
+  	     $('.concept.'+concept+'.content').show();
+  	     $('.concept.'+concept+'.menu').transition('slide down');
+  	   }
+  	   else
+  	   {
+  	     $('.basic.test.modal')
+          .modal('setting', 'closable', false)
+          .modal('setting', 'transition', 'slide down')
+          .modal('show');
+  	   }
+  	   
+       $('body, html').animate({
+         scrollTop: 0
+  	     }, 0);
+  		     
+  	   $current=concept;
+  	   
+  	   one_menuItems.removeClass("active");
+    	 one_menuItems.filter("[href=#one_start]").addClass("active");
+    	 two_menuItems.removeClass("active");
+    	 two_menuItems.filter("[href=#two_start]").addClass("active");
+    	 three_menuItems.removeClass("active");
+       three_menuItems.filter("[href=#three_start]").addClass("active");
+  	 }
+	 }
+	
+	  function grow(el) {
+		el.find('g').animate({
+			svgTransform: "scale(1)"
+			}, 250, function() {
+			});
+   };
+   
+   function ungrow(el) {
+     	el.find('g').animate({
+  				svgTransform: "scale(0.8)"
+  				}, 250, function() {
+  				});
+  	};
+  	
+		$(function() {
+		  
+		/*
+     * Replace all SVG images with inline SVG
+     */
+      $('img.svg').each(function(){
+          var $img = jQuery(this);
+          var imgID = $img.attr('id');
+          var imgClass = $img.attr('class');
+          var imgURL = $img.attr('src');
+          jQuery.get(imgURL, function(data) {
+              // Get the SVG tag, ignore the rest
+              var $svg = jQuery(data).find('svg');
+              // Add replaced image's ID to the new SVG
+              if(typeof imgID !== 'undefined') {
+                  $svg = $svg.attr('id', imgID);
+              }
+              // Add replaced image's classes to the new SVG
+              if(typeof imgClass !== 'undefined') {
+                  $svg = $svg.attr('class', imgClass+' replaced-svg');
+              }
+              // Remove any invalid XML tags as per http://validator.w3.org
+              $svg = $svg.removeAttr('xmlns:a');
+              // Replace image with new SVG
+              $img.replaceWith($svg);
+          }, 'xml');
+      });
+      
+      $('.ui.sticky.one').sticky({context: '#contextone'});
+      $('.ui.sticky.two').sticky({context: '#contexttwo'});
+      $('.ui.sticky.three').sticky({context: '#contextthree'});
+      
+      $('.concept.one.menu').transition('slide up');
+      $('.concept.two.menu').transition('slide up');
+      $('.concept.three.menu').transition('slide up');
+      
+      showc('none');
+      
+      
+		  $('.popup').popup();
+   });
+		
+	</script>
+
+{% endblock %}
