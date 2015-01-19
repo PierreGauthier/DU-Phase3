@@ -1,0 +1,85 @@
+{% extends "page_base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+	<style type="text/css">
+	
+		.accordion > .content {
+			height : 300px;
+			overflow-y: scroll;
+		}
+	
+	</style>
+  
+  <div class="ui left vertical inverted labeled icon sidebar menu">
+  	{% for name, content in data.items %}
+	  <a class="item" href="#{{name}}">
+	    <i class="home icon"></i>
+	    {{ content.title }}
+	  </a>
+	  {% endfor %}
+	</div>
+	
+  <div class="pusher">
+  	
+		<div class="ui rail">
+		  <div class="ui sticky">
+		  	<h1><div class="ui button menubutton" onclick="openmenu();" style="">
+  				<i class="content icon"></i>
+				</div>
+		   	Indawo
+		   	</h1>
+		  </div>
+		</div>
+		
+		<div id="context">
+			
+	  	{% for name, content in data.items %}
+	  	<div id="{{name}}" class="ui card">
+			  <div class="content">
+			    <a class="header">{{content.title}}</a>
+			    <div class="description">
+			      {{content.content}}
+			    </div>
+			  </div>
+			</div>
+		  {% endfor %}
+		  
+		</div>
+	
+  </div>
+	
+	<script src="/static/slowscrolltoancre.js"></script>
+	<script>
+	
+		function openmenu() {
+			$('.sidebar')
+			  .sidebar('setting', {
+			  		transition: 'push',
+			  		onChange: function(){
+			  			$('.menubutton').transition('fade');
+			  		}
+			  	})
+			  .sidebar('toggle');
+		}
+		
+		$(function() {
+			
+			$('.sidebar')
+			  .sidebar('setting', 'transition', 'push');
+			
+			$('.ui.sticky')
+			  .sticky({
+			    context: '#context'
+			  })
+			;
+			
+			slowscrolltoancre();
+				
+		});
+		
+	</script>
+
+{% endblock %}

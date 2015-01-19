@@ -60,9 +60,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'duphase2.urls'
+ROOT_URLCONF = 'Webapp.urls'
 
-WSGI_APPLICATION = 'duphase2.wsgi.application'
+WSGI_APPLICATION = 'Webapp.wsgi.application'
 
 
 # Database
