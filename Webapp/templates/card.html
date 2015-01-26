@@ -1,0 +1,10 @@
+<div id="{{card.id}}" class="ui card" style="{{card.style}}">
+  <div class="content">
+    <div class="header">{{card.title|safe}}
+    </div>
+    {% if card.divider == 'on' %}<div class="ui divider"></div>{% endif %}
+    <div class="description">
+      {{card..content|safe}}
+    </div>
+  </div>
+</div>

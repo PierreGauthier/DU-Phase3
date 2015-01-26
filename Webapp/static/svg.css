@@ -1,0 +1,242 @@
+/*-------------------
+       Colors
+--------------------*/
+
+.ui.black.svg {
+  fill: #1b1c1d !important;
+}
+
+a.ui.black.svg:hover {
+  fill: #1b1c1d !important;
+}
+
+.ui.blue.svg {
+  fill: #3b83c0 !important;
+}
+
+a.ui.blue.svg:hover {
+  fill: #458ac6 !important;
+}
+
+.ui.green.svg {
+  fill: #5bbd72 !important;
+}
+
+a.ui.green.svg:hover {
+  fill: #66c17b !important;
+}
+
+.ui.orange.svg {
+  fill: #e07b53 !important;
+}
+
+a.ui.orange.svg:hover {
+  fill: #e28560 !important;
+}
+
+.ui.pink.svg {
+  fill: #d9499a !important;
+}
+
+a.ui.pink.svg:hover {
+  fill: #dc56a1 !important;
+}
+
+.ui.purple.svg {
+  fill: #564f8a !important;
+}
+
+a.ui.purple.svg:hover {
+  fill: #5c5594 !important;
+}
+
+.ui.red.svg {
+  fill: #d95c5c !important;
+}
+
+a.ui.red.svg:hover {
+  fill: #dc6868 !important;
+}
+
+.ui.teal.svg {
+  fill: #00b5ad !important;
+}
+
+a.ui.teal.svg:hover {
+  fill: #00c4bc !important;
+}
+
+.ui.yellow.svg {
+  fill: #f2c61f !important;
+}
+
+a.ui.yellow.svg:hover {
+  fill: #f3ca2d !important;
+}
+
+.ui.black.dividing.svg {
+  border-bottom: 2px solid #1b1c1d;
+}
+
+.ui.blue.dividing.svg {
+  border-bottom: 2px solid #3b83c0;
+}
+
+.ui.green.dividing.svg {
+  border-bottom: 2px solid #5bbd72;
+}
+
+.ui.orange.dividing.svg {
+  border-bottom: 2px solid #e07b53;
+}
+
+.ui.pink.dividing.svg {
+  border-bottom: 2px solid #d9499a;
+}
+
+.ui.purple.dividing.svg {
+  border-bottom: 2px solid #564f8a;
+}
+
+.ui.red.dividing.svg {
+  border-bottom: 2px solid #d95c5c;
+}
+
+.ui.teal.dividing.svg {
+  border-bottom: 2px solid #00b5ad;
+}
+
+.ui.yellow.dividing.svg {
+  border-bottom: 2px solid #f2c61f;
+}
+
+/*-------------------
+      Inverted
+--------------------*/
+
+.ui.inverted.svg {
+  fill: #ffffff;
+}
+
+.ui.inverted.svg .sub.svg {
+  fill: rgba(255, 255, 255, 0.85);
+}
+
+.ui.inverted.attached.svg {
+  background: #333333 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background: #333333 linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  box-shadow: none;
+}
+
+.ui.inverted.block.svg {
+  background: #333333 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background: #333333 linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  box-shadow: none;
+}
+
+/*-------------------
+   Inverted fills
+--------------------*/
+
+.ui.inverted.black.svg {
+  fill: #aaaaaa !important;
+}
+
+a.ui.inverted.black.svg:hover {
+  fill: #b2b2b2 !important;
+}
+
+.ui.inverted.blue.svg {
+  fill: #54c8ff !important;
+}
+
+a.ui.inverted.blue.svg:hover {
+  fill: #63cdff !important;
+}
+
+.ui.inverted.green.svg {
+  fill: #2ecc40 !important;
+}
+
+a.ui.inverted.green.svg:hover {
+  fill: #37d249 !important;
+}
+
+.ui.inverted.orange.svg {
+  fill: #ff851b !important;
+}
+
+a.ui.inverted.orange.svg:hover {
+  fill: #ff8d2a !important;
+}
+
+.ui.inverted.pink.svg {
+  fill: #ff8edf !important;
+}
+
+a.ui.inverted.pink.svg:hover {
+  fill: #ff9de3 !important;
+}
+
+.ui.inverted.purple.svg {
+  fill: #cdc6ff !important;
+}
+
+a.ui.inverted.purple.svg:hover {
+  fill: #dad5ff !important;
+}
+
+.ui.inverted.red.svg {
+  fill: #ff695e !important;
+}
+
+a.ui.inverted.red.svg:hover {
+  fill: #ff776d !important;
+}
+
+.ui.inverted.teal.svg {
+  fill: #6dffff !important;
+}
+
+a.ui.inverted.teal.svg:hover {
+  fill: #7cffff !important;
+}
+
+.ui.inverted.yellow.svg {
+  fill: #ffe21f !important;
+}
+
+a.ui.inverted.yellow.svg:hover {
+  fill: #ffe42e !important;
+}
+
+.ui.inverted.block.svg {
+  border-bottom: none;
+}
+
+/*-------------------
+       Aligned
+--------------------*/
+
+.ui.left.aligned.svg {
+  text-align: left;
+}
+
+.ui.right.aligned.svg {
+  text-align: right;
+}
+
+.ui.centered.svg,
+.ui.center.aligned.svg {
+  text-align: center;
+}
+
+.ui.justified.svg {
+  text-align: justify;
+}
+
+.ui.justified.svg:after {
+  display: inline-block;
+  content: '';
+  width: 100%;
+}

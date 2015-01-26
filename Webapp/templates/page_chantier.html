@@ -1,53 +1,29 @@
 {% extends "page_base.html" %}
-
 {% block title %}{{title}}{% endblock %}
-
 {% block content %}
 
 	<style type="text/css">
-	
-		.accordion > .content {
-			height : 300px;
-			overflow-y: scroll;
+		body {
+			background-color: orange;
 		}
-	
 	</style>
   
-  <div class="ui left vertical inverted labeled icon sidebar menu">
-  	{% for name, content in data.items %}
-	  <a class="item" href="#{{name}}">
-	    <i class="home icon"></i>
-	    {{ content.title }}
-	  </a>
-	  {% endfor %}
-	</div>
+  {% include "menu.html" %}
 	
   <div class="pusher">
   	
-		<div class="ui rail">
-		  <div class="ui sticky">
-		  	<h1><div class="ui button menubutton" onclick="openmenu();" style="">
-  				<i class="content icon"></i>
-				</div>
-		   	Indawo
-		   	</h1>
-		  </div>
+  	{% include "header.html" %}
+  	
+		<div class="ui button huge circular icon orange sticky bottom myButton">
+			<i class="home icon large white"></i>
 		</div>
 		
-		<div id="context">
-			
-	  	{% for name, content in data.items %}
-	  	<div id="{{name}}" class="ui card">
-			  <div class="content">
-			    <a class="header">{{content.title}}</a>
-			    <div class="description">
-			      {{content.content}}
-			    </div>
-			  </div>
-			</div>
+		<div  id="context" style="padding-top:60px">
+	  	{% for el in data %}
+	  		{% include "card.html" with card=el %}
 		  {% endfor %}
-		  
 		</div>
+		
 	
   </div>
 	
@@ -76,7 +52,17 @@
 			  })
 			;
 			
+			$('.myButton').attr('style','margin-left:'+(window.screen.width - 0.22*window.screen.width)+'px;margin-top:'+(window.screen.height - 0.22*window.screen.height)+'px;');
+			
 			slowscrolltoancre();
+			
+			$( "svg" ).each(function(index) {
+				
+					var parent = $(this).parent();
+					$(this).attr('class', parent.attr('class'));
+					//parent.attr('class','');
+					
+				});
 				
 		});
 		

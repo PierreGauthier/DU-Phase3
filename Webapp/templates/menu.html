@@ -1,0 +1,22 @@
+
+<div class="ui left vertical sidebar menu">
+    
+  {% for el in data %}
+  <a class="item" href="#{{el.id}}">
+    <div class="ui mini icon image svg column">{{el.icon|safe}}</div>
+    <div class="column">{{ el.title }}</div>
+  </a>
+  {% endfor %}
+  
+  <div class="ui divider"></div>
+  
+  <a class="item" href="">
+    <div class="ui mini icon image inverted svg"></div>
+    Paramètre
+  </a>
+  <a class="item" href="">
+    <div class="ui mini icon image inverted svg"></div>
+    A propos
+  </a>
+  
+</div>
