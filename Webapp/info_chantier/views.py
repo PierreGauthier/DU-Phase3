@@ -8,9 +8,15 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from django.conf import settings
 from django import forms
+from info_chantier.models import *
     
 
 def nfc(request):
+    
+    chantier_test = Roadwork.objects.get(pk=1)
+    
+    print(chantier_test.name)
+    
     
     data = []
     
@@ -137,6 +143,12 @@ def nfc(request):
         'data': data 
     }, context_instance=RequestContext(request))
     
+    
+def subscrib(request):
+    return render_to_response('page_subscrib.html', {}, context_instance=RequestContext(request))
+    
+def walk(request):
+    return render_to_response('page_walkthroughs.html', {}, context_instance=RequestContext(request))
     
 def svg2string(name):
     

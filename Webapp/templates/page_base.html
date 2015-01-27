@@ -17,7 +17,7 @@
 
   <title>{% block title %}Base page{% endblock %}</title>
   
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300normal">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,500,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/semantic.min.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/static/svg.css">
   <script src="/static/jquery.js"></script>
@@ -25,6 +25,12 @@
   <script src="/static/semantic/semantic.min.js"></script>
 	
 </head>
+
+<style type="text/css">
+		.orange {
+			background-color: #ef6c00;
+		}
+</style>
 
 <body class="">   
 	{% block content %}{% endblock %}

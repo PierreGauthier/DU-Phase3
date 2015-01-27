@@ -1,0 +1,92 @@
+{% extends "page_base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+
+<style type="text/css">
+	body {
+		font-family: 'Roboto', Serif;
+		font-weight: 300;
+		background-color:#ef6c00;
+	}
+	.column {
+		vertical-align: text-top;
+	}
+</style>
+
+<div id="context">
+	<div calss="ui grid">
+		<div class="sixteen wide column resize" height=0.1 ></div>
+		<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.1 style="color:#303030;">Abonnement au services</center></div>
+		<div class="sixteen wide column resize" height=0.05 ></div>
+		<div class="sixteen wide column resize" height=0.1 ><center><img class="resize" src="/static/images/logo.png" height=0.075 /></center></div>
+		<div class="sixteen wide column resize" height=0.05 ></div>
+		<div class="sixteen wide column resize" height=0.05 ><center >Vous ne viendrez plus chez nous par hasard</center></div>
+		<div class="sixteen wide column resize" height=0.2 ></div>
+		<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.03 style="color:#ef6c00;font-weight:500;">DÉCOUVRIR</center></div>
+		<div class="sixteen wide column resize" height=0.1 ></div>
+	</div>
+</div>
+
+
+<script>
+
+	var currentId = 1;
+	var slideNumber = 5;
+	var x = 10;
+	var y = 10;
+	
+	function init() {	
+		$('.grid.slide').attr('style','height:'+y+'px;')
+		$('.image.slide').attr('style','height:'+y+'px;')
+		$('.slide').hide();
+		$('.slide.'+currentId).show();
+	}
+	function next() {
+		if(currentId < slideNumber) {
+			$('.slide.'+currentId).hide();
+			currentId = currentId+1;
+			$('.slide.'+currentId).show();
+		}
+		else window.location.reload();
+	}
+	function prev() {
+		if(currentId > 1) {
+			$('.slide.'+currentId).hide();
+			currentId = currentId-1;
+			$('.slide.'+currentId).show();
+		}
+		else next();
+	}
+	function goto(n) {
+		$('.slide.'+currentId).hide();
+		currentId = n;
+		$('.slide.'+currentId).show();
+	}
+	
+	$(function() {
+		
+		x = window.screen.width;
+		y = window.screen.height;
+		
+		$('.ui.sticky')
+		  .sticky({
+		    context: '#context'
+		  })
+		;
+		
+		init();
+		
+		$('.prevslide').attr('style',$('.prevslide').attr('style')+'margin-top:'+(-y)+'px;height:'+(y)+'px;');
+		$('.nextslide').attr('style',$('.nextslide').attr('style')+'margin-top:'+(-y)+'px;height:'+(y)+'px;');
+		$('.button.slide.5').attr('style',$('.button.slide.5').attr('style')+'width:'+(0.15*y)+'px;height:'+(0.15*y)+'px;');
+		$('.button.slide.5').offset({ top: y*0.3, left: (x/2)-(0.2*y/2) });
+		
+		$( ".resize" ).each(function( index, element ) {
+			$(this).attr('style', 'height:' + $(this).attr('height')*y + 'px;' + 'font-size:' + $(this).attr('height')*y + 'px;' + $(this).attr('style'));
+		});
+			
+	});
+	
+</script>
+
+{% endblock %}

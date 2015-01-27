@@ -1,0 +1,150 @@
+{% extends "page_base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+
+	<style type="text/css">
+		body {
+			font-family: 'Roboto', Serif;
+			font-weight: 300;
+			background-color:#ef6c00;
+		}
+		.column {
+			vertical-align: text-top;
+		}
+	</style>
+	
+	<div id="context">
+		
+		<div class="slide 1"  style="background-color:white">
+			<div calss="ui grid">
+				<div class="sixteen wide column resize" height=0.2 ></div>
+				<div class="sixteen wide column resize" height=0.15 ><center><img class="resize" src="/static/images/indawo_bib.png" height=0.15 /></center></div>
+				<div class="sixteen wide column resize" height=0.05 ></div>
+				<div class="sixteen wide column resize" height=0.1 ><center><img class="resize" src="/static/images/logo.png" height=0.075 /></center></div>
+				<div class="sixteen wide column resize" height=0.05 ></div>
+				<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.025 style="color:#757575;">Vous ne viendrez plus chez nous par hasard</center></div>
+				<div class="sixteen wide column resize" height=0.2 ></div>
+				<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.03 style="color:#ef6c00;font-weight:500;">DÉCOUVRIR</center></div>
+				<div class="sixteen wide column resize" height=0.1 ></div>
+			</div>
+		</div>
+		<div class="slide 2"  style="background-image:url(/static/images/background.png);">
+			<div calss="ui grid">
+				<div class="sixteen wide column resize" height=0.05 ></div>
+				<div class="sixteen wide column resize" height=0.55><div class="resize" height=0.7 style="background-image:url(static/images/home_screen.png); margin-left:10%; width:80%; background-size: 100%;"></div></div>
+				<div class="sixteen wide column resize" height=0 ><div class="resize" height=0.35 style="z-index:100;background-color:#ef6c00;"></div></div>
+				<div class="sixteen wide column resize" height=0.075 ><center><img class="resize" src="/static/images/home_icon.png" height=0.1 /></center></div>
+				<div class="sixteen wide column resize" height=0.05 ></div>
+				<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.04 style="color:white;padding-left:10%;padding-right:10%">Un résumé simple et lisible du chantier en cours</center></div>
+				<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.03 style="color:white">
+					<i height=0.03 class="icon arrow left resize" style="float:left;color:#ef6c00;"></i><span style="color:#cf360c;">&#x25cf;</span> &#x25cf; &#x25cf; &#x25cf;<i height=0.03 class="icon arrow right resize white" style="float:right;padding-right:10%;"></i> </center>
+				</div>
+			</div>
+		</div>
+		<div class="slide 3"  style="background-image:url(/static/images/background.png);">
+			<div calss="ui grid">
+				<div class="sixteen wide column resize" height=0.05 ></div>
+				<div class="sixteen wide column resize" height=0.55><div class="resize" height=0.7 style="background-image:url(static/images/favoris_screen.png); margin-left:10%; width:80%; background-size: 100%;"></div></div>
+				<div class="sixteen wide column resize" height=0 ><div class="resize" height=0.35 style="z-index:100;background-color:#ef6c00;"></div></div>
+				
+				<div class="sixteen wide column resize" height=0.075 ><center><img class="resize" src="/static/images/fav_icon.png" height=0.1 /></center></div>
+				<div class="sixteen wide column resize" height=0.05 ></div>
+				<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.04 style="color:white;padding-left:10%;padding-right:10%">Enregistré la page et retrouvé la à tout moment</center></div>
+				<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.03 style="color:white">
+					<i height=0.03 class="icon arrow left resize white" style="float:left;margin-left:5%;"></i>&#x25cf; <span style="color:#cf360c;">&#x25cf;</span> &#x25cf; &#x25cf;<i height=0.03 class="icon arrow right resize white" style="float:right;padding-right:10%;"></i> </center>
+				</div>
+			</div>
+		</div>
+		<div class="slide 4"  style="background-image:url(/static/images/background.png);">
+			<div calss="ui grid">
+				<div class="sixteen wide column resize" height=0.05 ></div>
+				<div class="sixteen wide column resize" height=0.55><div class="resize" height=0.7 style="background-image:url(static/images/menu_screen.png); margin-left:10%; width:80%; background-size: 100%;"></div></div>
+				<div class="sixteen wide column resize" height=0 ><div class="resize" height=0.35 style="z-index:100;background-color:#ef6c00;"></div></div>
+				<div class="sixteen wide column resize" height=0.075 ><center><img class="resize" src="/static/images/icon_menu.png" height=0.1 /></center></div>
+				<div class="sixteen wide column resize" height=0.05 ></div>
+				<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.04 style="color:white;padding-left:10%;padding-right:10%">Menu intuitif pour cibler l'information désirée</center></div>
+				<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.03 style="color:white">
+					<i height=0.03 class="icon arrow left resize white" style="float:left;margin-left:5%;"></i>&#x25cf; &#x25cf; <span style="color:#cf360c;">&#x25cf;</span> &#x25cf;<i height=0.03 class="icon arrow right resize white" style="float:right;padding-right:10%;"></i> </center>
+				</div>
+			</div>
+		</div>
+		<div class="slide 5"  style="background-color:#ef6c00;">
+			<div calss="ui grid">
+				<div class="sixteen wide column resize" height=0.275 ></div>
+				<div class="sixteen wide column resize" height=0.20 ><center><img class="resize" height=0.2 src="/static/images/subscribe_screen.png" /></center></div>
+				<div class="sixteen wide column resize" height=0.25 ></div>
+				<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.04 style="color:white;padding-left:10%;padding-right:10%">Abonnez-vous et recevez un suivi quotidien</center></div>
+				<div class="sixteen wide column resize" height=0.075 ><center class="resize" height=0.03 style="color:white">
+					<i height=0.03 class="icon arrow left resize white" style="float:left;margin-left:5%;"></i>&#x25cf; &#x25cf; &#x25cf; <span style="color:#cf360c;">&#x25cf;</span><i height=0.03 class="icon arrow right resize white" style="float:right;padding-right:10%;"></i> </center>
+				</div>
+			</div>
+		</div>
+	    
+        <div class="prevslide" onclick="prev();" style="float:left;background-color:blue;opacity:0;width:50%;"></div>
+    	<div class="nextslide" onclick="next();" style="float:right;background-color:green;opacity:0;width:50%;"></div>
+		
+	</div>
+   
+  
+	<script>
+	
+		var currentId = 1;
+		var slideNumber = 5;
+		var x = 10;
+		var y = 10;
+		
+		function init() {	
+			$('.grid.slide').attr('style','height:'+y+'px;')
+			$('.image.slide').attr('style','height:'+y+'px;')
+			$('.slide').hide();
+			$('.slide.'+currentId).show();
+		}
+		function next() {
+			if(currentId < slideNumber) {
+				$('.slide.'+currentId).hide();
+				currentId = currentId+1;
+				$('.slide.'+currentId).show();
+			}
+			else window.location.reload();
+		}
+		function prev() {
+			if(currentId > 1) {
+				$('.slide.'+currentId).hide();
+				currentId = currentId-1;
+				$('.slide.'+currentId).show();
+			}
+			else next();
+		}
+		function goto(n) {
+			$('.slide.'+currentId).hide();
+			currentId = n;
+			$('.slide.'+currentId).show();
+		}
+		
+		$(function() {
+			
+			x = window.screen.width;
+			y = window.screen.height;
+			
+			$('.ui.sticky')
+			  .sticky({
+			    context: '#context'
+			  })
+			;
+			
+			init();
+			
+			$('.prevslide').attr('style',$('.prevslide').attr('style')+'margin-top:'+(-y)+'px;height:'+(y)+'px;');
+			$('.nextslide').attr('style',$('.nextslide').attr('style')+'margin-top:'+(-y)+'px;height:'+(y)+'px;');
+			$('.button.slide.5').attr('style',$('.button.slide.5').attr('style')+'width:'+(0.15*y)+'px;height:'+(0.15*y)+'px;');
+			$('.button.slide.5').offset({ top: y*0.3, left: (x/2)-(0.2*y/2) });
+			
+			$( ".resize" ).each(function( index, element ) {
+				$(this).attr('style', 'height:' + $(this).attr('height')*y + 'px;' + 'font-size:' + $(this).attr('height')*y + 'px;' + $(this).attr('style'));
+			});
+				
+		});
+		
+	</script>
+
+{% endblock %}

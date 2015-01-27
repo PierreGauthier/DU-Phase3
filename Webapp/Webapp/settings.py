@@ -49,7 +49,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gmapi',
+    'info_chantier',
     'django_php'
 )
 

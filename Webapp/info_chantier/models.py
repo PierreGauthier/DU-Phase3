@@ -40,7 +40,7 @@ class Capteur(models.Model):
 class Message(models.Model):
     id_user = models.ForeignKey('User')
     id_roadwork = models.ForeignKey('Roadwork')
-    isAnswer = models.BooleanField()
+    isAnswer = models.BooleanField(default=False)
     content = models.CharField(max_length=1000)
     
 class User(models.Model):
