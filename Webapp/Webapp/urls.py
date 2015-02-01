@@ -5,8 +5,9 @@ from info_chantier import views
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', views.nfc),
+    url(r'^$', views.walk),
     url(r'^subscrib$', views.subscrib),
-    url(r'^walk$', views.walk),
+    url(r'^walk$', views.nfc),
+    url(r'^end$', views.end),
     url(r'^admin/', include(admin.site.urls)),
 )

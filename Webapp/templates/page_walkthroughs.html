@@ -37,7 +37,7 @@
 				<div class="sixteen wide column resize" height=0.05 ></div>
 				<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.04 style="color:white;padding-left:10%;padding-right:10%">Un résumé simple et lisible du chantier en cours</center></div>
 				<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.03 style="color:white">
-					<i height=0.03 class="icon arrow left resize" style="float:left;color:#ef6c00;"></i><span style="color:#cf360c;">&#x25cf;</span> &#x25cf; &#x25cf; &#x25cf;<i height=0.03 class="icon arrow right resize white" style="float:right;padding-right:10%;"></i> </center>
+					<i height=0.03 class="icon arrow left resize" style="float:left;color:#ef6c00;margin-left:5%;"></i><span style="color:#cf360c;">&#x25cf;</span> &#x25cf; &#x25cf; &#x25cf;<i height=0.03 class="icon arrow right resize white" style="float:right;padding-right:10%;"></i> </center>
 				</div>
 			</div>
 		</div>
@@ -49,7 +49,7 @@
 				
 				<div class="sixteen wide column resize" height=0.075 ><center><img class="resize" src="/static/images/fav_icon.png" height=0.1 /></center></div>
 				<div class="sixteen wide column resize" height=0.05 ></div>
-				<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.04 style="color:white;padding-left:10%;padding-right:10%">Enregistré la page et retrouvé la à tout moment</center></div>
+				<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.04 style="color:white;padding-left:10%;padding-right:10%">Enregistrez la page et retrouvez la à tout moment</center></div>
 				<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.03 style="color:white">
 					<i height=0.03 class="icon arrow left resize white" style="float:left;margin-left:5%;"></i>&#x25cf; <span style="color:#cf360c;">&#x25cf;</span> &#x25cf; &#x25cf;<i height=0.03 class="icon arrow right resize white" style="float:right;padding-right:10%;"></i> </center>
 				</div>
@@ -105,7 +105,8 @@
 				currentId = currentId+1;
 				$('.slide.'+currentId).show();
 			}
-			else window.location.reload();
+			else window.location.replace("walk");
+
 		}
 		function prev() {
 			if(currentId > 1) {

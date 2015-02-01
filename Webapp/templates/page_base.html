@@ -17,11 +17,12 @@
 
   <title>{% block title %}Base page{% endblock %}</title>
   
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,500,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,400&subset=latin' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/semantic.min.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/static/svg.css">
   <script src="/static/jquery.js"></script>
   <script src="/static/jquery.svganim.js"></script>
+  <script src="/static/svg.js"></script>
   <script src="/static/semantic/semantic.min.js"></script>
 	
 </head>
@@ -35,5 +36,46 @@
 <body class="">   
 	{% block content %}{% endblock %}
 </body>
+
+<script>
+	var x = 10;
+	var y = 10;
+	
+	$(function() {
+		
+		x = $(window).width();
+		y = $(window).height();
+		
+		//	svgtocode();
+		
+		$( ".resize" ).each(function( index, element ) {
+			var k = $(this).attr('height')*y;
+			if (k < 1) k = 1;
+			$(this).attr('style', 'height:' + k + 'px;' + $(this).attr('style'));
+			if (k < 10) k = 10;
+			$(this).attr('style', 'font-size:' + k + 'px;' + $(this).attr('style'));
+			$(this).attr('y', '' + k + 'px;');
+		});
+		
+		$( ".resize2" ).each(function( index, element ) {
+			alert(element);
+			var k = $(this).attr('height')*y;
+			if (k < 1) k = 1;
+			$(this).attr('style', 'height:' + k + 'px;' + 'font-size:' + $(this).attr('height')*y + 'px;' + $(this).attr('style'));
+			$(this).attr('y', '' + k + 'px;');
+		});
+		
+		$( ".propwidth" ).each(function( index, element ) {
+			var k = $(this).attr('width')*y;
+			if (k < 1) k = 1;
+			$(this).attr('style', 'width:' + k + 'px;' + $(this).attr('style'));
+		});
+		
+		$( ".proptop" ).each(function( index, element ) {
+			$(this).attr('style', 'margin-top:' + $(this).attr('top')*y + 'px;' + $(this).attr('style'));
+		});
+		
+	});
+</script>
 
 </html>

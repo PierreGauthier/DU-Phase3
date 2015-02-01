@@ -1,6 +1,28 @@
 	<style type="text/css">
 		body {
 			/*background-color: orange;*/
+			font-family: 'Roboto', sans-serif;
+		}	
+		h1 {
+		  color: #5050f0;
+		  font-weight: 300;
+		}
+		h2 {
+		  color: #505050;
+		  font-weight: 300;
+		}
+		h3 {
+		  color: #a0a0a0;
+		  font-weight: 300;
+		}
+		em {
+		  color: #5050f0;
+		  font-weight: 300;
+		  font-style: normal;
+		}
+		.content {
+		  color: #000080;
+		  font-weight: 300;
 		}
 	</style>
   
@@ -10,11 +32,11 @@
   	
   	{% include "header.html" %}
   	
-		<div class="ui button huge circular icon orange sticky bottom myButton">
+		<a href="subscrib"><div class="ui button huge circular icon orange sticky bottom myButton" >
 			<i class="home icon large white"></i>
-		</div>
+		</div></a>
 		
-		<div  id="context" style="padding-top:60px">
+		<div  class="cards"  id="context" style="margin-top:75px">
 	  	{% for el in data %}
 	  		{% include "card.html" with card=el %}
 		  {% endfor %}

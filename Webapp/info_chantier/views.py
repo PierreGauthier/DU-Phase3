@@ -23,9 +23,10 @@ def nfc(request):
     data.append({
             'id':'info',
             'style':'',
-            'title':'infos',
-            'header':'<h2>Refection de la chaussée</h2><h4>Rue de la tour d\'Auvergne</h4>',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
+            'title':'Refection de la chaussée',
+            'subtitle':'Rue de la tour d\'Auvergne</h4>',
+            'header':'Rue de la tour d\'Auvergne</h4>',
+            'content':'bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
             'divider':'on',
             'icon':svg2string('info')
         })
@@ -39,29 +40,12 @@ def nfc(request):
             'icon':svg2string('info')
         })
     data.append({
-            'id':'azerty',
+            'id':'info',
             'style':'',
-            'title':'infos',
-            'header':'dsfs',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'on',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'fjjrn',
-            'style':'',
-            'title':'infos',
-            'header':'sdfsdf',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'on',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'ferrf',
-            'style':'',
-            'title':'infos',
-            'header':'zerzer',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
+            'title':'Refection de la chaussée',
+            'subtitle':'Rue de la tour d\'Auvergne</h4>',
+            'header':'Rue de la tour d\'Auvergne</h4>',
+            'content':'bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
             'divider':'on',
             'icon':svg2string('info')
         })
@@ -75,29 +59,12 @@ def nfc(request):
             'icon':svg2string('info')
         })
     data.append({
-            'id':'azerty',
+            'id':'info',
             'style':'',
-            'title':'infos',
-            'header':'dsfs',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'on',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'fjjrn',
-            'style':'',
-            'title':'infos',
-            'header':'sdfsdf',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'on',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'ferrf',
-            'style':'',
-            'title':'infos',
-            'header':'zerzer',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
+            'title':'Refection de la chaussée',
+            'subtitle':'Rue de la tour d\'Auvergne</h4>',
+            'header':'Rue de la tour d\'Auvergne</h4>',
+            'content':'bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
             'divider':'on',
             'icon':svg2string('info')
         })
@@ -108,33 +75,6 @@ def nfc(request):
             'header':'Déviation',
             'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
             'divider':'off',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'azerty',
-            'style':'',
-            'title':'infos',
-            'header':'dsfs',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'on',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'fjjrn',
-            'style':'',
-            'title':'infos',
-            'header':'sdfsdf',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'on',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'ferrf',
-            'style':'',
-            'title':'infos',
-            'header':'zerzer',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'on',
             'icon':svg2string('info')
         })
 
@@ -149,6 +89,9 @@ def subscrib(request):
     
 def walk(request):
     return render_to_response('page_walkthroughs.html', {}, context_instance=RequestContext(request))
+    
+def end(request):
+    return render_to_response('page_end.html', {}, context_instance=RequestContext(request))
     
 def svg2string(name):
     

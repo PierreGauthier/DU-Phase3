@@ -1,0 +1,166 @@
+{% extends "page_base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+
+<style type="text/css">
+	body {
+		font-family: 'Roboto', Serif;
+		font-weight: 300;
+		background-color:white;
+		color: #B0B0B0;
+	}
+	input {
+		border:none;
+		font-family: 'Roboto', Serif;
+		font-weight: 300;
+		background-color:#ef6c00;
+		text-align:center;
+		color: white;
+	}
+	.active.item {
+		border-color:white;
+		border-width:10px;
+	}
+	.el {
+		cursor: pointer;
+	}
+	p {
+		padding-left : 10%;
+		padding-right : 10%;
+	}
+
+</style>
+
+ {% include "menu.html" %}
+	
+  <div class="pusher">
+  	
+  	{% include "header.html" %}
+  	
+  	<div class="ui accordion">
+  		
+    <div class="active title resize" height=0.02 style="float:right">Yo</div>
+    <div class="active content">
+    	
+    	<div class="resize" height=0.03 style="background-color:white;margin-top:20px">
+						<p class="resize" height=0.0175>56 personnes ont suivis ce chantier</p>
+					</div>
+				
+					<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
+					
+					<div class="resize" height=0.025  style="background-color:white;"></div>
+					
+					<div class="resize" height=0.04  style="background-color:white;color:#ef6c00;">
+						<p class="resize" height=0.035>Rue de la Tour D'Auvergne</p>
+					</div>
+					
+					<div class="resize" height=0.035  style="background-color:white;color:grey;">
+						<p class="resize" height=0.03>Réfection de la chaussé</p>
+					</div>
+					
+					<div class="resize" height=0.06  style="background-color:white;color:#D0D0D0;">
+						<p class="resize" height=0.025>Du 26 février au 3 mars</p>
+					</div>
+					
+					<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
+					
+					<div class="resize" height=0.03  style="background-color:white;"></div>
+					
+					<center class="resize" height=0.075>
+						<img class="propwidth" width=0.175 src="/static/images/LOGO_colas.png"/>
+						<span class="propwidth" width=0.1 > </span> 
+						<img class="propwidth" width=0.175 src="/static/images/nantes_metropole2.png"/>
+					</center>
+					
+					<div class="resize" height=0.03  style="background-color:white;"></div>
+					
+					<div class="ui grid" style="color:black;">
+						<div class="three wide column"></div>
+						<div class="five wide column resizes" height=0.01 ><center>Colas</center></div>
+						<div class="five wide column resizes" height=0.01 ><center>Nantes Métropole</center></div>
+					</div>
+					
+					<div class="resize" height=0.03  style="background-color:white;"></div>
+					
+					<div class="resize" height=0.12  style="background-color:white;">
+						<center class="resize" height=0.025><div class="ui button" style="background-color:#ef6c00;color:white;padding-left:3%;padding-right:3%">SUIVI COMPLET</div></center>
+					</div>
+					
+					<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
+					
+					<div class="resize" height=0.03  style="background-color:white;"></div>
+					
+					<div class="resize" height=0.06  style="background-color:white;color:#ef6c00;">
+						<center class="resize" height=0.03>NOTER LE CHANTIER</center>
+					</div>
+						
+					<div class="resize" height=0.125  style="background-color:white;" onmouseleave="myRatingLeave()">
+						<center class="ui grid myRating" >
+							<div class="three wide column"></div>
+						  <img class="el 1 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(1)" onmouseover="myRatingHover(1)"/>
+						  <img class="el 2 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(2)" onmouseover="myRatingHover(2)"/>
+						  <img class="el 3 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(3)" onmouseover="myRatingHover(3)"/>
+						  <img class="el 4 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(4)" onmouseover="myRatingHover(4)"/>
+						  <img class="el 5 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(5)" onmouseover="myRatingHover(5)"/>
+						  <input type="hidden" class="myRating value" placeholder="ADRESSE MAIL"  value="2"/>
+						</center>
+					</div>
+					
+					<div class="resize" height=0.05  style="background-color:white;">
+						<center class="resize" height=0.03>NOTE MOYENNE</center>
+					</div>
+					
+					<div class="resize" height=0.1  style="background-color:white;">
+						<center class="resize" height=0.05>3,9</center>
+					</div>
+    	
+    </div>
+    
+    <div class="title" style="paddig-top:0px;padding-bottom:0px;" >
+    	<center style="background-color:#ef6c00;color:white;" class="resize" height=0.015 ></center>
+    	<center style="background-color:#ef6c00;color:white;" class="resize" height=0.025 >QUESTIONNAIRE</center>
+    	<center style="background-color:#ef6c00;color:white;" class="resize" height=0.025 ></center>
+    </div>
+    <div class="content" >
+    </div>
+
+  	</div>
+  	
+  </div>
+  
+<script>
+
+	function myRatingSelect(num) {
+		$('.myRating.value').attr('value', ''+num);
+		$('.myRating > .el').attr('src', '/static/images/cone_grey.png');
+		
+		for (i = 1; i < num+1; i++) {
+			$('.myRating > .el.'+i).attr('src', '/static/images/cone_click.png');
+		}
+	}
+	
+	function myRatingHover(num) {
+		$('.myRating > .el').attr('src', '/static/images/cone_grey.png');
+		
+		for (i = 1; i < num+1; i++) {
+			$('.myRating > .el.'+i).attr('src', '/static/images/cone_click.png');
+		}
+	}
+	
+	function myRatingLeave() {
+		myRatingSelect(Number($('.myRating.value').attr('value')));	
+	}
+	
+	$(function() {
+		
+			$('.ui.accordion')
+	  .accordion()
+	;
+			
+			myRatingSelect(3);
+
+	});
+	
+</script>
+
+{% endblock %}

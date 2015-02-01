@@ -7,84 +7,113 @@
 		font-family: 'Roboto', Serif;
 		font-weight: 300;
 		background-color:#ef6c00;
+		color: white;
+	}
+	input {
+		border:none;
+		font-family: 'Roboto', Serif;
+		font-weight: 300;
+		background-color:#ef6c00;
+		text-align:center;
+		color: white;
 	}
 	.column {
 		vertical-align: text-top;
 	}
+	.active.item {
+		border-color:white;
+		border-width:10px;
+	}
+	::-webkit-input-placeholder { /* WebKit browsers */
+	    color:    white;
+		text-align: center;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color:    white;
+	   opacity:  1;
+		text-align: center;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color:    white;;
+	   opacity:  1;
+		text-align: center;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+	   color:    white;
+	   text-align: center; 
+	}
+	.button {
+		
+	}
 </style>
-
-<div id="context">
-	<div calss="ui grid">
-		<div class="sixteen wide column resize" height=0.1 ></div>
-		<div class="sixteen wide column resize" height=0.15 ><center class="resize" height=0.1 style="color:#303030;">Abonnement au services</center></div>
-		<div class="sixteen wide column resize" height=0.05 ></div>
-		<div class="sixteen wide column resize" height=0.1 ><center><img class="resize" src="/static/images/logo.png" height=0.075 /></center></div>
-		<div class="sixteen wide column resize" height=0.05 ></div>
-		<div class="sixteen wide column resize" height=0.05 ><center >Vous ne viendrez plus chez nous par hasard</center></div>
-		<div class="sixteen wide column resize" height=0.2 ></div>
-		<div class="sixteen wide column resize" height=0.05 ><center class="resize" height=0.03 style="color:#ef6c00;font-weight:500;">DÉCOUVRIR</center></div>
-		<div class="sixteen wide column resize" height=0.1 ></div>
+	
+<div calss="ui grid">
+	
+	<div class="sixteen wide column resize" height=0.1 ></div>
+	
+	<div class="sixteen wide column resize" height=0.1 ><center class="resize" height=0.05 style="font-weight:100;">
+		Abonnement au service
+	</center></div>
+	
+	<div class="sixteen wide column resize" height=0.2 ><center class="resize" height=0.02 style="margin-left:15%;margin-right:15%;color:#af260c;">
+		Chaque jours restez informé de tous changements sur le chantier de votre rue.</br>
+		Accèdez à un compte rendu quotidien.</br> Recevez des alertes personnalisées.
+	</center></div>
+	
+	<div class="sixteen wide column resize" height=0.06 ><center class="ui pointing secondary tabular menu" style="margin-left:10%;margin-right:10%;border-style: none;">
+		<a class="active item resize" data-tab="news" style="width:49%;padding-bottom:30px;border-style: none;color:white;" height=0.025>NEWSLETTER</a>
+		<a class="item resize" data-tab="sms" style="width:49%;padding-bottom:30px;border-style: none;color:white;" height=0.025>SMS</a>
+	</center></div>
+	
+	<div class="resize proptop propwidth" width=0.001 height=0.06 top=-0.06 style="background-color:#cf360c;position:absolute;left:50%;"></div>
+	
+	<div class="ui active tab" data-tab="news">
+		<div class="sixteen wide column resize" height=0.01 ></div>
+		<div class="sixteen wide column resize" height=0.002 style="margin-left:10%;width:40%;background-color: white;"></div>
+		<div class="sixteen wide column resize" height=0.002 style="float:left;margin-left:10%;width:40%;background-color: white;"></div>
+		<div class="sixteen wide column resize" height=0.002 style="float:right;margin-right:10%;width:40%;background-color: #cf360c;"></div>
+		
+		<div class="sixteen wide column resize ui active tab" height=0.1 ><center>
+			<input class="resize" placeholder="ADRESSE MAIL" type="text" height=0.025 style="margin-left:10%;margin-right:10%;width:80%;font-weight:100;">
+		</center></div>
 	</div>
+	
+	<div class="ui tab" data-tab="sms">
+		<div class="sixteen wide column resize" height=0.01 ></div>
+		<div class="sixteen wide column resize" height=0.002 style="margin-left:50%;width:40%;background-color: white;"></div>
+		<div class="sixteen wide column resize" height=0.002 style="float:left;margin-left:10%;width:40%;background-color: #cf360c;"></div>
+		<div class="sixteen wide column resize" height=0.002 style="float:right;margin-right:10%;width:40%;background-color: white;"></div>
+		
+		<div class="sixteen wide column resize ui active tab" height=0.1 ><center>
+			<input class="resize" placeholder="TÉLÉPHONE" type="text" height=0.025 style="margin-left:10%;margin-right:10%;width:80%;font-weight:100;">
+		</center></div>
+	</div>
+	
+	<div class="sixteen wide column resize" height=0.025 ></div>
+	<div class="sixteen wide column resize" height=0.002 style="margin-left:10%;margin-right:10%;width:80%;background-color: #cf360c;"></div>
+	
+	<div class="sixteen wide column resize" height=0.1 ><center >
+		<input class="resize" placeholder="NUMÉRO ET NOM DE RUE" type="text" height=0.025 style="margin-left:10%;margin-right:10%;width:80%;font-weight:100;">
+	</center></div>
+	
+	<div class="sixteen wide column resize" height=0.025 ></div>
+	<div class="sixteen wide column resize" height=0.002 style="margin-left:10%;margin-right:10%;width:80%;background-color: #cf360c;"></div>
+	
+	<div class="sixteen wide column resize" height=0.3 ><center>
+		<a><img class=resize height=0.15 src="/static/images/subscribe_screen.png"/></a>
+	</center></div>
+	
+	<div class="sixteen wide column resize" height=0.1 ></div>
+	
 </div>
 
 
 <script>
-
-	var currentId = 1;
-	var slideNumber = 5;
-	var x = 10;
-	var y = 10;
-	
-	function init() {	
-		$('.grid.slide').attr('style','height:'+y+'px;')
-		$('.image.slide').attr('style','height:'+y+'px;')
-		$('.slide').hide();
-		$('.slide.'+currentId).show();
-	}
-	function next() {
-		if(currentId < slideNumber) {
-			$('.slide.'+currentId).hide();
-			currentId = currentId+1;
-			$('.slide.'+currentId).show();
-		}
-		else window.location.reload();
-	}
-	function prev() {
-		if(currentId > 1) {
-			$('.slide.'+currentId).hide();
-			currentId = currentId-1;
-			$('.slide.'+currentId).show();
-		}
-		else next();
-	}
-	function goto(n) {
-		$('.slide.'+currentId).hide();
-		currentId = n;
-		$('.slide.'+currentId).show();
-	}
 	
 	$(function() {
-		
-		x = window.screen.width;
-		y = window.screen.height;
-		
-		$('.ui.sticky')
-		  .sticky({
-		    context: '#context'
-		  })
+		$('.menu .item')
+		  .tab()
 		;
-		
-		init();
-		
-		$('.prevslide').attr('style',$('.prevslide').attr('style')+'margin-top:'+(-y)+'px;height:'+(y)+'px;');
-		$('.nextslide').attr('style',$('.nextslide').attr('style')+'margin-top:'+(-y)+'px;height:'+(y)+'px;');
-		$('.button.slide.5').attr('style',$('.button.slide.5').attr('style')+'width:'+(0.15*y)+'px;height:'+(0.15*y)+'px;');
-		$('.button.slide.5').offset({ top: y*0.3, left: (x/2)-(0.2*y/2) });
-		
-		$( ".resize" ).each(function( index, element ) {
-			$(this).attr('style', 'height:' + $(this).attr('height')*y + 'px;' + 'font-size:' + $(this).attr('height')*y + 'px;' + $(this).attr('style'));
-		});
-			
 	});
 	
 </script>
