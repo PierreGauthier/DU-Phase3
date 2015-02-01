@@ -1,22 +1,48 @@
+<style type="text/css">
+	
+	menugrid {
+	  overflow-x : scroll;
+	}
 
-<div class="ui left vertical sidebar menu">
+</style>
+
+<div class="myMenu" style="z-index:5;display:none;">
+  
+  <div class="resize" height=1 style="width:100%;background-color:black;position:absolute;opacity:0.5;" onclick="openmenu();"></div>
+  
+  <div class="ui grid menugrid" style="position:absolute;width:60%">
     
-  {% for el in data %}
-  <a class="item" href="#{{el.id}}">
-    <div class="ui mini icon image svg column">{{el.icon|safe}}</div>
-    <div class="column">{{ el.title }}</div>
-  </a>
-  {% endfor %}
-  
-  <div class="ui divider"></div>
-  
-  <a class="item" href="">
-    <div class="ui mini icon image inverted svg"></div>
-    Paramètre
-  </a>
-  <a class="item" href="">
-    <div class="ui mini icon image inverted svg"></div>
-    A propos
-  </a>
-  
+    <a class="row" href="#{{el.id}}">
+      <div class="two wide column">Menu</div>
+    </a>
+    
+    {% for el in data %}
+    <div class="row" style="background-color:white;margin-left:10%;" onclick="openmenu();">
+      <a href="#{{el.id}}" class="column"></a>
+      <a href="#{{el.id}}" class="two wide column resize" height=0.02 >{{el.icon|safe}}</a>
+      <a href="#{{el.id}}" class="twelve wide column resize" height=0.02 >{{ el.id }}</a>
+    </div>
+    {% endfor %}
+    
+    <div class="ui divider"></div>
+    
+    <a class="item" href="">
+      <div class="ui mini icon image inverted svg"></div>
+      Paramètre
+    </a>
+    <a class="item" href="">
+      <div class="ui mini icon image inverted svg"></div>
+      A propos
+    </a>
+    
+  </div>
+
 </div>
+
+<script>
+	
+	function openmenu() {
+		$('.myMenu').transition('fade');
+	}
+	
+</script>

@@ -2,75 +2,109 @@
 		body {
 			/*background-color: orange;*/
 			font-family: 'Roboto', sans-serif;
+			font-size:10;
+			overflow: hidden;
 		}	
-		h1 {
-		  color: #5050f0;
-		  font-weight: 300;
-		}
-		h2 {
-		  color: #505050;
-		  font-weight: 300;
-		}
-		h3 {
-		  color: #a0a0a0;
-		  font-weight: 300;
-		}
-		em {
-		  color: #5050f0;
-		  font-weight: 300;
-		  font-style: normal;
-		}
-		.content {
-		  color: #000080;
-		  font-weight: 300;
-		}
+	h1 {
+	  color: #2090f0;
+		font-family: 'Roboto', sans-serif;
+	  font-weight: 300;
+	  margin-top:0%;
+	  margin-bottom:0px;
+	  padding-bottom:0%;
+	  padding-top:0%;
+	}
+	h2 {
+	  color: black;
+		font-family: 'Roboto', sans-serif;
+	  font-weight: 300;
+	  margin-top:0px;
+	  margin-bottom:0px;
+	  padding-bottom:0px;
+	  padding-top:0px;
+	}
+	h3 {
+	  color: #a0a0a0;
+		font-family: 'Roboto', sans-serif;
+	  font-weight: 400;
+	  margin-top:0px;
+	  margin-bottom:0px;
+	  padding-bottom:0px;
+	  padding-top:0px;
+	}
+	h4 {
+	  color: #C0C0C0;
+		font-family: 'Roboto', sans-serif;
+	  font-weight: 300;
+	  margin-top:0px;
+	  margin-bottom:0px;
+	  padding-bottom:1%;
+	  padding-top:0px;
+	}
+	h5 {
+	  color: white;
+		font-family: 'Roboto', sans-serif;
+	  font-weight: 100;
+	  margin-top:0px;
+	  margin-bottom:0px;
+	  padding-bottom:1%;
+	  padding-top:0px;
+	}
+	h5 > b{
+	  color: white;
+		font-family: 'Roboto', sans-serif;
+	  font-weight: 400;
+	  margin-top:0px;
+	  margin-bottom:0px;
+	  padding-bottom:1%;
+	  padding-top:0px;
+	}
+	em {
+	  color:  #2090f0;
+	  font-style: normal;
+	}
+	.cardContent {
+	  padding-left: 7%;
+	  padding-right: 7%;
+	  font-size: 12px;
+	}
+	p {
+	  color: #202020;
+	  font-weight: 300;
+	  padding-bottom:1%;
+	}
 	</style>
   
   {% include "menu.html" %}
 	
-  <div class="pusher">
-  	
-  	{% include "header.html" %}
-  	
-		<a href="subscrib"><div class="ui button huge circular icon orange sticky bottom myButton" >
-			<i class="home icon large white"></i>
-		</div></a>
-		
-		<div  class="cards"  id="context" style="margin-top:75px">
-	  	{% for el in data %}
-	  		{% include "card.html" with card=el %}
-		  {% endfor %}
-		</div>
-		
+	{% include "header.html" %}
 	
-  </div>
+	<div class="proptop" top=0.75 style="z-index:4;position:absolute;margin-left:75%">
+	<a href="subscrib">
+		<div class="ui button huge circular icon " style="background-color:#ef6c00;-moz-box-shadow: 0px 2px 2px 0px #656565;
+-webkit-box-shadow: 0px 2px 2px 0px #656565;
+-o-box-shadow: 0px 2px 2px 0px #656565;
+box-shadow: 0px 2px 2px 0px #656565;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=2);">
+		<img class="resize" src="/static/images/sub_icon.png" height=0.05 ></i>
+	</div></a></div>
+	
+	<div class="resize" height=0.02 ></div>
+	
+	<div class="cards " top=0.1 height=0.9 id="context" style="overflow-x:hidden;overflow-y=scroll;z-index:1;width:100%;height:600px;">
+		
+		{% for el in data %}
+  		{% include "card.html" with card=el %}
+	  {% endfor %}
+  	
+	</div>
 	
 	<script src="/static/slowscrolltoancre.js"></script>
 	<script>
-	
-		function openmenu() {
-			$('.sidebar')
-			  .sidebar('setting', {
-			  		transition: 'push',
-			  		onChange: function(){
-			  			$('.menubutton').transition('fade');
-			  		}
-			  	})
-			  .sidebar('toggle');
-		}
 		
 		$(function() {
 			
-			$('.sidebar')
-			  .sidebar('setting', 'transition', 'push');
-			
-			$('.ui.sticky')
-			  .sticky({
-			    context: '#context'
-			  })
-			;
-			
-			$('.myButton').attr('style','margin-left:'+(window.screen.width - 0.22*window.screen.width)+'px;margin-top:'+(window.screen.height - 0.22*window.screen.height)+'px;');
+			//$('.myButton').attr('style','margin-left:'+(window.screen.width - 0.22*window.screen.width)+'px;margin-top:'+(window.screen.height - 0.22*window.screen.height)+'px;');
 			
 			slowscrolltoancre();
 			
@@ -81,6 +115,7 @@
 					//parent.attr('class','');
 					
 				});
+				
 				
 		});
 		

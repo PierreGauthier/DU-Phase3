@@ -22,63 +22,59 @@ def nfc(request):
     
     data.append({
             'id':'info',
-            'style':'',
-            'title':'Refection de la chaussée',
-            'subtitle':'Rue de la tour d\'Auvergne</h4>',
-            'header':'Rue de la tour d\'Auvergne</h4>',
-            'content':'bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
+            'topstyle':'',
+            'bottomstyle':'',
+            'title':'<h1>Réféction de la chaussée<h1>',
+            'subtitle':'<h3>Rue de la tour d\'Auvergne</h3>',
+            'header':'<h4>du <em>26 février</em> 2015 au <em>03 mars</em> 2015</h4>',
+            'content':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque mauris id est convallis, eget aliquam lectus consectetur. Maecenas feugiat vehicula justo vitae facilisis. Pellentesque egestas rutrum sem, ut auctor sem ultrices finibus. Nunc massa tortor, ultrices vitae libero non, tempus efficitur purus. Vivamus iaculis nec urna vitae porttitor. Integer. ',
+            'divider':'on',
+            'icon':svg2string('info')
+        })
+    data.append({
+            'id':'entreprise',
+            'topstyle':'',
+            'bottomstyle':'',
+            'title':'<h2>Colas Centre-Ouest</h2>',
+            'subtitle':'<h4>Entreprise de VRD</h4>',
+            'header':'Siège Social',
+            'content':'2 Rue Gspard Coriolis, 44307 Nantes<br/>02 28 01 02 03',
+            'divider':'on',
+            'icon':svg2string('info')
+        })
+    data.append({
+            'id':'moa',
+            'topstyle':'',
+            'bottomstyle':'',
+            'title':'<h2>Nantes Métropole</h2>',
+            'subtitle':'<h4>Maitre d\'oeuvre</h4>',
+            'header':'Développement urbain',
+            'content':'5 rue Vasco de Gama<br/>02 28 01 02 03',
             'divider':'on',
             'icon':svg2string('info')
         })
     data.append({
             'id':'dev',
-            'style':'background-image:url('+generateMapUrl()+')',
-            'title':'infos',
-            'header':'Déviation',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
+            'topstyle':'background-color:#009988',
+            'bottomstyle':'style=background-image:url('+generateMapUrl()+');height:200px; onclick=location.href=\'http://maps.google.com?q=894%20Granville%20Street%20Vancouver%20BC%20V6Z%201K3\'',
+            'title':'<h5><b>Déviations</b> par Rue Arthur III</h5>',
+            'subtitle':'<h5><b>3,2</b> Kilomètres pour <b>4</b> minutes</h5>',
+            'header':'',
+            'content':'',
             'divider':'off',
             'icon':svg2string('info')
         })
     data.append({
             'id':'info',
-            'style':'',
-            'title':'Refection de la chaussée',
-            'subtitle':'Rue de la tour d\'Auvergne</h4>',
-            'header':'Rue de la tour d\'Auvergne</h4>',
-            'content':'bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
+            'topstyle':'',
+            'bottomstyle':'',
+            'title':'<h1>Réféction de la chaussée<h1>',
+            'subtitle':'<h3>Rue de la tour d\'Auvergne</h3>',
+            'header':'<h4>du <em>26 février</em> 2015 au <em>03 mars</em> 2015</h4>',
+            'content':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque mauris id est convallis, eget aliquam lectus consectetur. Maecenas feugiat vehicula justo vitae facilisis. Pellentesque egestas rutrum sem, ut auctor sem ultrices finibus. Nunc massa tortor, ultrices vitae libero non, tempus efficitur purus. Vivamus iaculis nec urna vitae porttitor. Integer. ',
             'divider':'on',
             'icon':svg2string('info')
         })
-    data.append({
-            'id':'dev',
-            'style':'background-image:url('+generateMapUrl()+')',
-            'title':'infos',
-            'header':'Déviation',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'off',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'info',
-            'style':'',
-            'title':'Refection de la chaussée',
-            'subtitle':'Rue de la tour d\'Auvergne</h4>',
-            'header':'Rue de la tour d\'Auvergne</h4>',
-            'content':'bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'on',
-            'icon':svg2string('info')
-        })
-    data.append({
-            'id':'dev',
-            'style':'background-image:url('+generateMapUrl()+')',
-            'title':'infos',
-            'header':'Déviation',
-            'content':'<h4>Du tant au tant</h4>bledfksdf sdkfsdkfhdjhzjk fsjdhfsk djfhs kdfjzhjdhf kzjhfd skjdf kjhdsfjh',
-            'divider':'off',
-            'icon':svg2string('info')
-        })
-
-
     return render_to_response('page_chantier.html', {
         'data': data 
     }, context_instance=RequestContext(request))
@@ -101,4 +97,4 @@ def svg2string(name):
     
 def generateMapUrl():
     
-    return "https://maps.googleapis.com/maps/api/staticmap?zoom=3&size=600x300&path=color:0x0000ff|weight:5|40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397"
+    return "https://maps.googleapis.com/maps/api/staticmap?center=47.2062432,-1.5619455&zoom=16&size=600x300&path=color:0x0000ff|weight:5|47.208105,%20-1.562444|47.206786,%20-1.562101|47.207180,%20-1.559301|47.206138,%20-1.559043|47.205759,%20-1.561908"

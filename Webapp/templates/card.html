@@ -1,21 +1,15 @@
 
-<style type="text/css">
 
-
-
-</style>
-
-
-<div id="{{card.id}}" class="ui card fluid" style="width:100%;{{card.style}}">
-  <div class="content">
-    <div class="header">
-      <h1 class="resize" height=0.03 style="padding-bottom:0px;margin-top:0px" >{{card.title|safe|capfirst}}</h1>
-      <h2 class="resize" height=0.02 style="padding-bottom:0px;margin-top:0px" >{{card.subtitle|safe|capfirst}}</h2>
-    </div>
-    {% if card.divider == 'on' %}<div class="ui divider"></div>{% endif %}
-    <div class="description">
-      <h3 class="resize" height=0.02 style="padding-bottom:0px;margin-top:0px" >Azerty <em>26</em></h3>
-      <div class="content" height=0.02 >{{card.content|safe|capfirst}}</div>
-    </div>
+<div id="{{card.id}}" class="ui card fluid " height=0.1 style="margin-left:5%;width:90%;">
+  <div class="cardContent" style={{card.topstyle}}>
+    <p class="resize" height=0.01></p>
+    <span class="" height=0.03 >{{card.title|safe|capfirst}}</span>
+    <span class="" height=0.02 >{{card.subtitle|safe|capfirst}}</span>
   </div>
-</div>
+  {% if card.divider == 'on' %}<div class="ui divider" style="margin-left:2%;margin-right:2%;"></div>{% endif %}
+  <div class="cardContent" {{card.bottomstyle}}>
+    <span class="" height=0.02 >{{card.header|safe|capfirst}}</span>
+    <span class="" height=0.02 >{{card.content|safe|capfirst}}</span>
+    <p class="resize" height=0.01> </p>
+  </div>
+</div>  
