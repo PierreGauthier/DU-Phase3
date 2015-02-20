@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Indawo</title>
+		<link rel="stylesheet" href="css/semantic.min.css"/>
+	</head>
+	
+	<body>
+	
+		<div class="resize" height=0.1 style="background-color:#ef6c00;">
+			<i class="icon content resize proptop" height=0.05 top=0.025 style="color:#cf360c;margin-left:5%;float:left"></i>
+			<center class="resize proptop" height=0.05 top=0.02 style="position:absolute;color:white;font-weight:300;width:100%">IndawoPro</center>
+		</div>
+		
+		<div class="resize" height=0.075 style="background-color:#ef6c00;">
+			<center class="resize proptop" height=0.02 top=0.02 style="position:absolute;color:white;font-weight:300;width:100%">ACCES PIETONS</center>
+		</div>
+		
+		<div class="resize" height=0.001 style="background-color:#cf360c;"></div>
+	
+	
+	</body>
+	
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/semantic.min.js"></script>
+	<script src="cordova.js"></script>
+	<script src="js/feed.js"></script>
+	<script src="js/application.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/phonegap-nfc.js"></script>
+	<script>
+	
+	 $(document)
+	         .on('pagebeforecreate', Application.updateIcons)
+	         .one('deviceready', Application.initApplication);
+					 
+	var x = 10;
+	var y = 10;
+	
+	$(function() {
+		
+		x = $(window).width();
+		y = $(window).height();
+		
+		//	svgtocode();
+		
+		$( ".resize" ).each(function( index, element ) {
+			var k = $(this).attr('height')*y;
+			if (k < 1) k = 1;
+			$(this).attr('style', 'height:' + k + 'px;' + $(this).attr('style'));
+			if (k < 10) k = 10;
+			$(this).attr('style', 'font-size:' + k + 'px;' + $(this).attr('style'));
+			$(this).attr('y', '' + k + 'px;');
+		});
+		
+		$( ".resize2" ).each(function( index, element ) {
+			alert(element);
+			var k = $(this).attr('height')*y;
+			if (k < 1) k = 1;
+			$(this).attr('style', 'height:' + k + 'px;' + 'font-size:' + $(this).attr('height')*y + 'px;' + $(this).attr('style'));
+			$(this).attr('y', '' + k + 'px;');
+		});
+		
+		$( ".propwidth" ).each(function( index, element ) {
+			var k = $(this).attr('width')*y;
+			if (k < 1) k = 1;
+			$(this).attr('style', 'width:' + k + 'px;' + $(this).attr('style'));
+		});
+		
+		$( ".proptop" ).each(function( index, element ) {
+			$(this).attr('style', 'margin-top:' + $(this).attr('top')*y + 'px;' + $(this).attr('style'));
+		});
+		
+	});
+	</script>
+</html>

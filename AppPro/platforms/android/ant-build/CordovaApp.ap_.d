@@ -27,10 +27,13 @@ D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\css \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\img \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\index.html \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\js \
+D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\master.css \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\plugins \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\css\index.css \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\img\logo.png \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\js\index.js \
+D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\js\main.js \
+D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\js\phonegap-toast.js \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\plugins\com.chariotsolutions.nfc.plugin \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\plugins\com.chariotsolutions.nfc.plugin\www \
 D:\Projets\DU-Phase3\AppPro\platforms\android\assets\www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js \
