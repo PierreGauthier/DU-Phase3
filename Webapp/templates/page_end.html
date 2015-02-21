@@ -29,9 +29,9 @@
 	
   <div>
   	
-  	{% include "menu.html" %}
-  	
   	{% include "header.html" %}
+  	
+  	{% include "menu.html" %}
   	
   	<div class="ui accordion ">
   		
@@ -90,17 +90,7 @@
 						<center class="resize" height=0.03>NOTER LE CHANTIER</center>
 					</div>
 						
-					<div class="resize" height=0.125  style="background-color:white;" onmouseleave="myRatingLeave()">
-						<center class="ui grid myRating" style="margin-right:0px;">
-							<div class="three wide column"></div>
-						  <img class="el 1 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(1)" onmouseover="myRatingHover(1)"/>
-						  <img class="el 2 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(2)" onmouseover="myRatingHover(2)"/>
-						  <img class="el 3 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(3)" onmouseover="myRatingHover(3)"/>
-						  <img class="el 4 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(4)" onmouseover="myRatingHover(4)"/>
-						  <img class="el 5 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(5)" onmouseover="myRatingHover(5)"/>
-						  <input type="hidden" class="myRating value"  value="2"/>
-						</center>
-					</div>
+					{% include "myrating.html" %}
 					
 					<div class="resize" height=0.05  style="background-color:white;">
 						<center class="resize" height=0.03>NOTE MOYENNE</center>
@@ -118,7 +108,15 @@
     	<center style="background-color:#ef6c00;color:white;" class="resize" height=0.035 ></center>
     </div>
     <div class="content" >
-    	truc
+    	
+    	<center class="resize" height=0.02 >Afin de nous aider à améliorer notre action ...</center>
+    	<center class="resize" height=0.02 style="color:#cf360c;" >Prestation en amomt</center>
+    	<div class="resize" height=0.001 style="background-color:#cf360c;width:90%;margin-left:5%;" >Information sur le ....</div>
+    	<div class="resize" height=0.02 >
+					{% include "myrating.html" %}</div>
+    	
+    	
+    	
     </div>
 
   	</div>
@@ -126,27 +124,6 @@
   </div>
   
 <script>
-
-	function myRatingSelect(num) {
-		$('.myRating.value').attr('value', ''+num);
-		$('.myRating > .el').attr('src', '/static/images/cone_grey.png');
-		
-		for (i = 1; i < num+1; i++) {
-			$('.myRating > .el.'+i).attr('src', '/static/images/cone_click.png');
-		}
-	}
-	
-	function myRatingHover(num) {
-		$('.myRating > .el').attr('src', '/static/images/cone_grey.png');
-		
-		for (i = 1; i < num+1; i++) {
-			$('.myRating > .el.'+i).attr('src', '/static/images/cone_click.png');
-		}
-	}
-	
-	function myRatingLeave() {
-		myRatingSelect(Number($('.myRating.value').attr('value')));	
-	}
 		
 		$(function() {
 		
@@ -154,7 +131,7 @@
 		  .accordion()
 		;
 			
-			myRatingSelect(3);
+			myRatingInit();
 
 	});
 	

@@ -1,0 +1,44 @@
+
+<div class="resize" height=0.125  style="background-color:white;" onmouseleave="myRatingLeave(this)">
+	<center class="ui grid myRating" style="margin-right:0px;">
+		<div class="three wide column"></div>
+	  <img class="el 1 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(this,1)" onmouseover="myRatingHover(this,1)"/>
+	  <img class="el 2 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(this,2)" onmouseover="myRatingHover(this,2)"/>
+	  <img class="el 3 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(this,3)" onmouseover="myRatingHover(this,3)"/>
+	  <img class="el 4 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(this,4)" onmouseover="myRatingHover(this,4)"/>
+	  <img class="el 5 resize two wide column"  height=0.1 src="/static/images/person19.svg" onclick="myRatingSelect(this,5)" onmouseover="myRatingHover(this,5)"/>
+	  <input type="hidden" class="value"  value="0"/>
+	</center>
+</div>
+
+<script>
+
+  function myRatingInit() {
+		$('.el', '.myRating').attr('src', '/static/images/cone_grey.png');
+	}
+  
+  function myRatingSelect(el, num) {
+    var parent = $(el).parent();
+		$('.value', parent).attr('value', ''+num);
+		$('.el', parent).attr('src', '/static/images/cone_grey.png');
+		
+		for (i = 1; i < num+1; i++) {
+			$('.el.'+i,parent).attr('src', '/static/images/cone_click.png');
+		}
+	}
+	
+	function myRatingHover(el, num) {
+    var parent = $(el).parent();
+		$('.el',parent).attr('src', '/static/images/cone_grey.png');
+		
+		for (i = 1; i < num+1; i++) {
+			$('.el.'+i,parent).attr('src', '/static/images/cone_click.png');
+		}
+	}
+	
+	function myRatingLeave(el) {
+	  var val = $('.value',el);
+		myRatingSelect(val, Number(val.attr('value')));	
+	}
+  
+</script>

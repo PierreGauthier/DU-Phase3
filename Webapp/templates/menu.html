@@ -1,39 +1,29 @@
-<style type="text/css">
-	
-	menugrid {
-	  overflow-x : scroll;
-	}
-
-</style>
-
-<div class="myMenu" style="z-index:5;display:none;">
+<div class="myMenu proptop" top=0.16 style="display:none;position:fixed;width:100%;">
   
-  <div class="resize" height=1 style="width:100%;background-color:black;position:absolute;opacity:0.5;" onclick="openmenu();"></div>
+  <div class="resize proptop" top=-0.01 height=1 style="position:absolute;width:100%;background-color:black;opacity:0.5;" onclick="openmenu();"></div>
   
-  <div class="ui grid menugrid" style="position:absolute;width:60%">
-    
-    <a class="row" href="#{{el.id}}">
-      <div class="two wide column">Menu</div>
-    </a>
+  <div class="resize proptop" top=-0.01 height=1 style="position:absolute;width:75%;background-color:white;" onclick="openmenu();"></div>
+  
+  <div class="ui grid menugrid" style="position:absolute;width:75%;background-color:white;">
     
     {% for el in data %}
-    <div class="row" style="background-color:white;margin-left:10%;" onclick="openmenu();">
-      <a href="#{{el.id}}" class="column"></a>
-      <a href="#{{el.id}}" class="two wide column resize" height=0.02 >{{el.icon|safe}}</a>
+    <div class="row" style="margin-left:2%;" onclick="openmenu();">
+      <a href="#{{el.id}}" class="two wide column resize" height=0.01 >{{ el.icon|safe }}</a>
       <a href="#{{el.id}}" class="twelve wide column resize" height=0.02 >{{ el.id }}</a>
     </div>
     {% endfor %}
     
     <div class="ui divider"></div>
     
-    <a class="item" href="">
-      <div class="ui mini icon image inverted svg"></div>
-      Paramètre
-    </a>
-    <a class="item" href="">
-      <div class="ui mini icon image inverted svg"></div>
-      A propos
-    </a>
+    <div class="row" style="margin-left:2%;" onclick="openmenu();">
+      <a href="#{{el.id}}" class="two wide column resize" height=0.02 >{{ el.icon|safe }}</a>
+      <a href="#{{el.id}}" class="twelve wide column resize" height=0.02 >Paramètre</a>
+    </div>
+    
+    <div class="row" style="margin-left:2%;" onclick="openmenu();">
+      <a href="#{{el.id}}" class="two wide column resize" height=0.02 >{{ el.icon|safe }}</a>
+      <a href="#{{el.id}}" class="twelve wide column resize" height=0.02 >A Propos</a>
+    </div>
     
   </div>
 

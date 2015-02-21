@@ -75,6 +75,28 @@ def nfc(request):
             'divider':'on',
             'icon':svg2string('info')
         })
+    data.append({
+            'id':'info',
+            'topstyle':'',
+            'bottomstyle':'',
+            'title':'<h1>Réféction de la chaussée<h1>',
+            'subtitle':'<h3>Rue de la tour d\'Auvergne</h3>',
+            'header':'<h4>du <em>26 février</em> 2015 au <em>03 mars</em> 2015</h4>',
+            'content':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque mauris id est convallis, eget aliquam lectus consectetur. Maecenas feugiat vehicula justo vitae facilisis. Pellentesque egestas rutrum sem, ut auctor sem ultrices finibus. Nunc massa tortor, ultrices vitae libero non, tempus efficitur purus. Vivamus iaculis nec urna vitae porttitor. Integer. ',
+            'divider':'on',
+            'icon':svg2string('info')
+        })
+    data.append({
+            'id':'info',
+            'topstyle':'',
+            'bottomstyle':'',
+            'title':'<h1>Réféction de la chaussée<h1>',
+            'subtitle':'<h3>Rue de la tour d\'Auvergne</h3>',
+            'header':'<h4>du <em>26 février</em> 2015 au <em>03 mars</em> 2015</h4>',
+            'content':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque mauris id est convallis, eget aliquam lectus consectetur. Maecenas feugiat vehicula justo vitae facilisis. Pellentesque egestas rutrum sem, ut auctor sem ultrices finibus. Nunc massa tortor, ultrices vitae libero non, tempus efficitur purus. Vivamus iaculis nec urna vitae porttitor. Integer. ',
+            'divider':'on',
+            'icon':svg2string('info')
+        })
     return render_to_response('page_chantier.html', {
         'data': data 
     }, context_instance=RequestContext(request))
@@ -85,6 +107,9 @@ def subscrib(request):
     
 def walk(request):
     return render_to_response('page_walkthroughs.html', {}, context_instance=RequestContext(request))
+    
+def unset(request):
+    return render_to_response('unsetcookie.html', {}, context_instance=RequestContext(request))
     
 def end(request):
     return render_to_response('page_end.html', {}, context_instance=RequestContext(request))
