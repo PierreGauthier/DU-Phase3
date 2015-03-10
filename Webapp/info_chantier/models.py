@@ -38,14 +38,15 @@ class Capteur(models.Model):
     value = models.IntegerField()
     
 class Message(models.Model):
-    id_user = models.ForeignKey('User')
+    id_user = models.ForeignKey('user')
     id_roadwork = models.ForeignKey('Roadwork')
     isAnswer = models.BooleanField(default=False)
     content = models.CharField(max_length=1000)
     
-class User(models.Model):
+class user(models.Model):
+    phone = models.CharField(max_length=20)
     email = models.CharField(max_length=50)
-    adress = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
     levelinfo = models.IntegerField()
     
 class Pro(models.Model):

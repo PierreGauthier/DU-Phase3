@@ -70,9 +70,22 @@
 			if (k < 1) k = 1;
 			$(this).attr('style', 'width:' + k + 'px;' + $(this).attr('style'));
 		});
+	
+		$( ".resize3" ).each(function( index, element ) {
+			var k = $(this).attr('height')*y;
+			if (k < 1) k = 1;
+			$(this).attr('style', 'height:' + k + 'px;' + $(this).attr('style'));
+			if (k < 10) k = 10;
+			$(this).attr('style', 'font-size:' + k*0.8 + 'px;' + $(this).attr('style'));
+			$(this).attr('y', '' + k*0.8 + 'px;');
+		});
 		
 		$( ".proptop" ).each(function( index, element ) {
 			$(this).attr('style', 'margin-top:' + $(this).attr('top')*y + 'px;' + $(this).attr('style'));
+		});
+		
+		$( ".propbottom" ).each(function( index, element ) {
+			$(this).attr('style', 'bottom:' + $(this).attr('bottom')*y + 'px;' + $(this).attr('style'));
 		});
 		
 	});

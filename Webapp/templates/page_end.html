@@ -7,7 +7,7 @@
 		font-family: 'Roboto', Serif;
 		font-weight: 300;
 		background-color:white;
-		color: #B0B0B0;
+		color: #555555;
 	}
 	input {
 		border:none;
@@ -29,99 +29,176 @@
 	
   <div>
   	
-  	{% include "header.html" %}
-  	
-  	{% include "menu.html" %}
-  	
-  	<div class="ui accordion ">
+  	<div class="ui accordion proptop" top=0.105 style="position:absolute;width:100%;">
   		
-    <div class="active title" style="paddig-top:0px;padding-bottom:0px;"></div>
-    <div class="active content" style="paddig-top:0px;padding-bottom:0px;">
+    <div class="active title" style="position:fixed;width:100%;paddig-top:0px;padding-bottom:0px;z-index:4;">
+    	<i class="icon big white angle up proptop" top=0.01 style="position:absolute;margin-left:80%;"></i>
+    </div>
+    <div class="active content" style="paddig-top:0px;padding-bottom:0px;z-index:1;">
     	
-    	<div class="resize" height=0.03 style="background-color:white;">
-						<p class="resize" height=0.0175>56 personnes ont suivis ce chantier</p>
-					</div>
+    	<div class="resize proptop" height=0.02 top=0.02 style="background-color:white;"></div>
+    	
+			<div class="resize" height=0.035 style="background-color:white;">
+				<p class="resize" height=0.0175>56 personnes ont suivis ce chantier</p>
+			</div>
+		
+			<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
+			
+			<div class="resize" height=0.025  style="background-color:white;"></div>
+			
+			<div class="resize" height=0.05  style="background-color:white;color:#ef6c00;">
+				<p class="resize" height=0.035>Rue de la Tour D'Auvergne - Terminé</p>
+			</div>
+			
+			<div class="resize" height=0.035  style="background-color:white;color:grey;">
+				<p class="resize" height=0.03>Réfection de la chaussé</p>
+			</div>
+			
+			<div class="resize" height=0.06  style="background-color:white;color:#D0D0D0;">
+				<p class="resize" height=0.025>Du 26 février au 3 mars</p>
+			</div>
+			
+			<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
+			
+			<div class="resize" height=0.03  style="background-color:white;"></div>
+			
+			<center class="resize" height=0.075 style="background-color:white;">
+				<img class="propwidth" width=0.2 src="/static/images/LOGO_colas.png"/>
+				<span class="propwidth" width=0.1 > </span> 
+				<img class="propwidth" width=0.2 src="/static/images/nantes_metropole2.png"/>
+			</center>
+			
+			<div class="resize" height=0.03  style="background-color:white;"></div>
+			
+			<div class="ui grid" style="color:black;background-color:white;margin-right:0px;">
+				<div class="two wide column"></div>
+				<div class="six wide column resizes" height=0.0075 ><center>Colas</center></div>
+				<div class="six wide column resizes" height=0.0075 ><center>Nantes Métropole</center></div>
+			</div>
+			
+			<div class="resize" height=0.03  style="background-color:white;"></div>
+			
+			<div class="resize" height=0.12  style="background-color:white;">
+				<center class="resize" height=0.015><a href="walk"><div class="ui small button" style="background-color:#ef6c00;color:white;padding-left:3%;padding-right:3%">RETOUR AU SUIVI COMPLET</div></a></center>
+			</div>
+			
+			<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
+			
+			<div class="resize" height=0.03  style="background-color:white;"></div>
+			
+			<div class="resize" height=0.06  style="background-color:white;color:#ef6c00;">
+				<center class="resize" height=0.03>NOTER LE CHANTIER</center>
+			</div>
 				
-					<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
-					
-					<div class="resize" height=0.025  style="background-color:white;"></div>
-					
-					<div class="resize" height=0.04  style="background-color:white;color:#ef6c00;">
-						<p class="resize" height=0.035>Rue de la Tour D'Auvergne</p>
-					</div>
-					
-					<div class="resize" height=0.035  style="background-color:white;color:grey;">
-						<p class="resize" height=0.03>Réfection de la chaussé</p>
-					</div>
-					
-					<div class="resize" height=0.06  style="background-color:white;color:#D0D0D0;">
-						<p class="resize" height=0.025>Du 26 février au 3 mars</p>
-					</div>
-					
-					<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
-					
-					<div class="resize" height=0.03  style="background-color:white;"></div>
-					
-					<center class="resize" height=0.075 style="background-color:white;">
-						<img class="propwidth" width=0.2 src="/static/images/LOGO_colas.png"/>
-						<span class="propwidth" width=0.1 > </span> 
-						<img class="propwidth" width=0.2 src="/static/images/nantes_metropole2.png"/>
-					</center>
-					
-					<div class="resize" height=0.03  style="background-color:white;"></div>
-					
-					<div class="ui grid" style="color:black;background-color:white;margin-right:0px;">
-						<div class="two wide column"></div>
-						<div class="six wide column resizes" height=0.01 ><center>Colas</center></div>
-						<div class="six wide column resizes" height=0.01 ><center>Nantes Métropole</center></div>
-					</div>
-					
-					<div class="resize" height=0.03  style="background-color:white;"></div>
-					
-					<div class="resize" height=0.12  style="background-color:white;">
-						<center class="resize" height=0.025><a href="walk"><div class="ui button" style="background-color:#ef6c00;color:white;padding-left:3%;padding-right:3%">SUIVI COMPLET</div></a></center>
-					</div>
-					
-					<div class="resize" height=0.001  style="background-color:#D0D0D0;margin-left:5%;margin-right:5%"></div>
-					
-					<div class="resize" height=0.03  style="background-color:white;"></div>
-					
-					<div class="resize" height=0.06  style="background-color:white;color:#ef6c00;">
-						<center class="resize" height=0.03>NOTER LE CHANTIER</center>
-					</div>
-						
-					{% include "myrating.html" %}
-					
-					<div class="resize" height=0.05  style="background-color:white;">
-						<center class="resize" height=0.03>NOTE MOYENNE</center>
-					</div>
-					
-					<div class="resize" height=0.1  style="background-color:white;">
-						<center class="resize" height=0.05>3,9</center>
-					</div>
+			{% include "myrating.html" %}
+			
+			<div class="resize" height=0.05  style="background-color:white;">
+				<center class="resize" height=0.03>NOTE MOYENNE</center>
+			</div>
+			
+			<div class="resize" height=0.01  style="background-color:white;">
+				<center class="resize" height=0.05>3,9</center>
+			</div>
+			
+			<div class="resize" height=0.075  style="background-color:white;"></div>
     	
     </div>
     
-    <div class="title" style="paddig-top:0px;padding-bottom:0px;" >
+    <div class="title" style="position:fixed;paddig-top:0px;padding-bottom:0px;width:100%;z-index:2;" >
     	<center style="background-color:#ef6c00;color:white;" class="resize" height=0.025 ></center>
-    	<center style="background-color:#ef6c00;color:white;" class="resize" height=0.035 >QUESTIONNAIRE</center>
+    	<center style="background-color:#ef6c00;color:white;" class="resize" height=0.025 >QUESTIONNAIRE</center>
     	<center style="background-color:#ef6c00;color:white;" class="resize" height=0.035 ></center>
+    	<div class="resize" height=0.002 style="background-color:#cf360c;" ></div>
     </div>
-    <div class="content" >
+    <div class="content" style="z-index:1;">
     	
-    	<center class="resize" height=0.02 >Afin de nous aider à améliorer notre action ...</center>
-    	<center class="resize" height=0.02 style="color:#cf360c;" >Prestation en amomt</center>
-    	<div class="resize" height=0.001 style="background-color:#cf360c;width:90%;margin-left:5%;" >Information sur le ....</div>
-    	<div class="resize" height=0.02 >
-					{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.12 ></div>
+    	<center class="resize" height=0.03 style="width:80%;margin-left:10%;" >Afin de nous aider à améliorer notre action nous vous invitons à répondre à ce questionnaire.</center>
+    	<div class="resize" height=0.15 ></div>
+    	<center class="resize" height=0.03 style="color:#cf360c;" >Prestation en amont</center>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.002 style="background-color:#cf360c;width:90%;margin-left:5%;"></div>
+    	<div class="resize" height=0.05 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Informations sur le déroulement du chantier à venir.</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;" >Prise en compte de la demande</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;" >Délai prévisionnel</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
     	
+    	<div class="resize" height=0.15 ></div>
+    	<center class="resize" height=0.03 style="color:#cf360c;" >Durant la prestation</center>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.002 style="background-color:#cf360c;width:90%;margin-left:5%;"></div>
+    	<div class="resize" height=0.05 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Réactivité des intervenants</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Relation avec les agents</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Signalisation et mise en sécurité du chantier</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Propreté du chantier</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;" >Disposition mises en oeuvre pour éviter les nuisances</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Coordination des travaux : Avec votre chantier</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Coordination des travaux : Avec les intervenants du domaine public</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
     	
+    	<div class="resize" height=0.15 ></div>
+    	<center class="resize" height=0.03 style="color:#cf360c;" >Après la prestation</center>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.002 style="background-color:#cf360c;width:90%;margin-left:5%;"></div>
+    	<div class="resize" height=0.05 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Remise en état du lieu</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	<div class="resize" height=0.1 ></div>
+    	<div class="resize" height=0.025 style="margin-left:10%;margin-right:10%;">Respect du délai</div>
+    	<div class="resize" height=0.02 ></div>
+    	<div class="resize" height=0.02 >{% include "myrating.html" %}</div>
+    	
+    	<div class="resize" height=0.15 ></div>
+    	<center class="resize" height=0.025><a href="walk"><div class="ui button" style="background-color:#ef6c00;color:white;padding-left:3%;padding-right:3%">ENVOYER</div></a></center>
+    	<div class="resize" height=0.15 ></div>
     	
     </div>
+      </br> 
 
   	</div>
   	
   </div>
+  
+    {% include "menu.html" %}
+  
+  <div style="position:fixed;width:100%;top:0px;background-color:#ef6c00;">
+	  <div class="resize" height=0.12 > 
+		  <center class="proptop" top=-0.05 style="position:absolute;width:60%;margin-left:20%">
+		    <img class="resize" src="/static/images/indawo_logo.png" height=0.04 style="margin-right:5%" />
+		  </center>
+	    <span onclick="openmenu();"><i class="content icon resize proptop" height=0.04 style="float:left;color:#cf360c;width:5%;margin-left:5%;" top=0.04></i></span>
+		</div> 
+  	<div class="resize" height=0.002 style="background-color:#cf360c;z-index:1" ></div>
+	</div>
   
 <script>
 		

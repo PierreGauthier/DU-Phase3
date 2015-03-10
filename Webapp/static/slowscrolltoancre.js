@@ -1,8 +1,8 @@
 function slowscrolltoancre() {
 	
 	// Cache selectors
-	var topMenu = $(".menu");
-	var topMenuHeight = 0;
+	var topMenu = $(".myMenu");
+	var topMenuHeight = $("#header_end").offset().top+50;
 	
 	// All list items
 	var menuItems = topMenu.find("a");
@@ -16,15 +16,16 @@ function slowscrolltoancre() {
 
 	// Bind click handler to menu items
 	menuItems.click(function(e){
+		openmenu();
 		var href = $(this).attr("href"),
-		offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-100;
+		offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight;
 		$('body, html').animate({
 	 scrollTop: offsetTop
 	     }, 800);
 	     menuItems.removeClass("active");
 			 $(this).addClass("active");
 	     return false;
-		});
+	});
 
 	// Bind to scroll
 	$(window).scroll(function(){
@@ -33,7 +34,7 @@ function slowscrolltoancre() {
 		
 		// Get id of current scroll item
 		var cur = scrollItems.map(function(){
-			if ($(this).offset().top < fromTop+150) {
+			if ($(this).offset().top < fromTop) {
 				return $(this); 
 			}
 		});

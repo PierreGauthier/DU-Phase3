@@ -73,7 +73,7 @@
 	}
 	</style>
 	
-	<div class="cards proptop" top=0.17 id="context" style="position:absolute;width:100%;">
+	<div class="cards proptop" top=0.19 id="context" style="position:absolute;width:100%;">
 		{% for card in data %}
 			<div id="{{card.id}}" class="ui card fluid " height=0.1 style="margin-left:5%;width:90%;">
 			  <div class="cardContent" style={{card.topstyle}}>
@@ -82,26 +82,27 @@
 			    <span class="" height=0.02 >{{card.subtitle|safe|capfirst}}</span>
 			  </div>
 			  {% if card.divider == 'on' %}<div class="ui divider" style="margin-left:2%;margin-right:2%;"></div>{% endif %}
-			  <div class="cardContent" {{card.bottomstyle}}>
+			  <div class="cardContent" {{card.bottomstyle|safe}}>
 			    <span class="" height=0.02 >{{card.header|safe|capfirst}}</span>
 			    <span class="" height=0.02 >{{card.content|safe|capfirst}}</span>
 			    <p class="resize" height=0.01> </p>
 			  </div>
 			</div> 
 	  {% endfor %}
+	  <div class="resize" height=0.01 ></div>
 	</div>
 	
-	<div class="proptop resize" height=0.15 top=0.8 style="position:fixed;top:0px;left:75%"><a href="subscrib">
+	<div class="propbottom" bottom=0.05 style="position:fixed;left:75%"><a href="subscrib">
 		<div class="ui button circular icon " style="background-color:#ef6c00;-moz-box-shadow: 0px 2px 2px 0px #656565;
 				-webkit-box-shadow: 0px 2px 2px 0px #656565;-o-box-shadow: 0px 2px 2px 0px #656565;box-shadow: 0px 2px 2px 0px #656565;
 				filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=2);">
-			<img class="resize" src="/static/images/sub_icon.png" height=0.1 ></i>
+			<img class="resize" src="/static/images/sub_icon.png" height=0.075 ></i>
 		</div>
 	</a></div>
   
   {% include "menu.html" %}
   
-  <div style="position:fixed;width:100%;top:0px;background-color:#ef6c00;">
+  <div id="header" style="position:fixed;width:100%;top:0px;background-color:#ef6c00;">
 	  <div class="resize" height=0.12 > 
 		  <center class="proptop" top=-0.05 style="position:absolute;width:60%;margin-left:20%">
 		    <img class="resize" src="/static/images/indawo_logo.png" height=0.04 style="margin-right:5%" />
@@ -113,6 +114,8 @@
 		    <a id="BookmarkMe" style="color:white;">AJOUTER LA PAGE AUX FAVORIS</a>
 		  </center>
 		</div> 
+		<div class="resize" id="header_end" height=0.002 style="background-color:#cf360c;" > 
+		</div>
 	</div>
 	
 	<script src="/static/slowscrolltoancre.js"></script>

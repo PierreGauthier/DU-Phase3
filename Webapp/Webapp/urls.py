@@ -10,5 +10,7 @@ urlpatterns = patterns('',
     url(r'^walk$', views.walk),
     url(r'^unset$', views.unset),
     url(r'^end$', views.end),
+    url(r'^mail$', views.testmail),
+    url(r'^newUser/(?P<phone>\d{10})/(?P<email>.*)$', views.newUser),
     url(r'^admin/', include(admin.site.urls)),
 )
